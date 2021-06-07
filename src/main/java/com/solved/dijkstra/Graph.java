@@ -11,7 +11,7 @@ class Graph {
 
 	public final static Logger LOGGER = LogManager.getLogger(Graph.class);
 
-	private final int MAX_VERTS = 7;
+	private final int MAX_VERTS = 10;
 	private final int INFINITY = 1_000_000;
 	private Vertex vertexList[]; // Ð¡Ð¿Ð¸Ñ�Ð¾Ðº Ð²ÐµÑ€ÑˆÐ¸Ð½
 	private int adjMat[][]; // ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ñ�Ð¼ÐµÐ¶Ð½Ð¾Ñ�Ñ‚Ð¸

@@ -5,5 +5,5 @@ import com.solved.dijkstra.*;
 
 public interface ICity {
 
-	String[] getAll();
+	List<City> getAll();
 }

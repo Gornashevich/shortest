@@ -9,6 +9,7 @@ import com.solved.dijkstra.batis.CityService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 
 class PathApp {
 
@@ -18,18 +19,10 @@ class PathApp {
 		Graph theGraph = new Graph();
 		City city = new City();
 		CityService cityS = new CityService();
-		String[] list = cityS.getAll();
+		List<String> list = cityS.getAll();
 
-		for (int i = 0; i < list.length; i++) {
-			theGraph.addVertex(list[i]);
-		}
-
-		/*
-		 * theGraph.addVertex("A"); // 0 theGraph.addVertex("B"); // 1
-		 * theGraph.addVertex("C"); // 2 theGraph.addVertex("D"); // 3
-		 * theGraph.addVertex("E"); // 4 theGraph.addVertex("F"); // 5
-		 * theGraph.addVertex("G"); // 6
-		 */
+		list.stream().forEach((c)-> theGraph.addVertex(c));;
+		
 		theGraph.addEdge(0, 1, 50); // AB 50
 		theGraph.addEdge(0, 3, 80); // AD 80
 

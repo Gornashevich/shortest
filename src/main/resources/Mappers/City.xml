@@ -5,13 +5,13 @@
 <mapper namespace="com.solved.dijkstra.batis.ICity">
 	<resultMap id="cityMapper"
 		type="com.solved.dijkstra.batis.City" autoMapping="false">
-		<result property="id" column="id" />
+		
 		<result property="name" column="name" />
 
 	</resultMap>
 
 	<select id="getAll" resultMap="cityMapper">
-		select name from cities
+		select * from cities
 	</select>
 
 

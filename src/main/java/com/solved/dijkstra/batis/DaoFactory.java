@@ -30,9 +30,11 @@ public class DaoFactory {
 
 		} catch (IOException e) {
 			LOGGER.error("Error: " + e);
-		} finally {
-			((PooledDataSource) factory.getConfiguration().getEnvironment().getDataSource()).forceCloseAll();
-		}
+		} /*
+			 * finally { ((PooledDataSource)
+			 * factory.getConfiguration().getEnvironment().getDataSource()).forceCloseAll();
+			 * }
+			 */
 		return countMap;
 
 	}
