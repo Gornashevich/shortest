@@ -32,7 +32,7 @@ public class BatisCity {
     }
 
     public static List<Pathway> getAll(){
-        try (SqlSession sqlSession = SessionFactory.getSqlSessionFactory().openSession()) {
+        try (SqlSession sqlSession = SessionFactory.getSqlSessionFactory().openSession(true)) {
             IPathway pathway = sqlSession.getMapper(IPathway.class);
             return pathway.getAll();
         }

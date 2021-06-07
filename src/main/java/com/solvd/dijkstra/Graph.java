@@ -7,7 +7,7 @@ class Graph {
 
     public final static Logger LOGGER = LogManager.getLogger(Graph.class);
 
-    private final int MAX_VERTS = 6;
+    private final int MAX_VERTS = 15;
     private final int INFINITY = 1_000_000;
     private Vertex vertexList[]; // Список вершин
     private int adjMat[][]; // Матрица смежности
