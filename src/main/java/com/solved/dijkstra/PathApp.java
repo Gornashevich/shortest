@@ -20,8 +20,10 @@ class PathApp {
 		theGraph.addVertex("D"); // 3
 		theGraph.addVertex("E"); // 4
 		theGraph.addVertex("F"); // 5
+		theGraph.addVertex("G"); // 6
 		theGraph.addEdge(0, 1, 50); // AB 50
 		theGraph.addEdge(0, 3, 80); // AD 80
+		
 		theGraph.addEdge(1, 2, 60); // BC 60
 		theGraph.addEdge(1, 3, 90); // BD 90
 		theGraph.addEdge(2, 4, 40); // CE 40
@@ -29,6 +31,8 @@ class PathApp {
 		theGraph.addEdge(3, 4, 70); // DE 70
 		theGraph.addEdge(1, 4, 50); // BE 50
 		theGraph.addEdge(5, 4, 10); // FE 10
+		theGraph.addEdge(5, 6, 30); // FG 30
+		
 
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
 			LOGGER.info("Choose the start point name:");

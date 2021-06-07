@@ -11,7 +11,7 @@ class Graph {
 
 	public final static Logger LOGGER = LogManager.getLogger(Graph.class);
 
-	private final int MAX_VERTS = 6;
+	private final int MAX_VERTS = 7;
 	private final int INFINITY = 1_000_000;
 	private Vertex vertexList[]; // Ð¡Ð¿Ð¸Ñ�Ð¾Ðº Ð²ÐµÑ€ÑˆÐ¸Ð½
 	private int adjMat[][]; // ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ñ�Ð¼ÐµÐ¶Ð½Ð¾Ñ�Ñ‚Ð¸
@@ -85,7 +85,7 @@ class Graph {
 		int minDist = INFINITY; // Ð˜Ñ�Ñ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð²Ñ‹Ñ�Ð¾ÐºÐ¸Ð¹ "Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼"
 		int indexMin = 0;
 		arr = new ArrayList<Integer>();
-		for (int j = 1; j < nVerts; j++) // Ð”Ð»Ñ� ÐºÐ°Ð¶Ð´Ð¾Ð¹ Ð²ÐµÑ€ÑˆÐ¸Ð½Ñ‹
+		for (int j = 0; j < nVerts; j++) // Ð”Ð»Ñ� ÐºÐ°Ð¶Ð´Ð¾Ð¹ Ð²ÐµÑ€ÑˆÐ¸Ð½Ñ‹
 		{ // Ð•Ñ�Ð»Ð¸ Ð¾Ð½Ð° Ð½Ðµ Ð²ÐºÐ»ÑŽÑ‡ÐµÐ½Ð° Ð² Ð´ÐµÑ€ÐµÐ²Ð¾
 			if (!vertexList[j].isInTree && // Ð¸ ÐµÐµ Ñ€Ð°Ñ�Ñ�Ñ‚Ð¾Ñ�Ð½Ð¸Ðµ Ð¼ÐµÐ½ÑŒÑˆÐµ
 					sPath[j].distance < minDist) // Ñ�Ñ‚Ð°Ñ€Ð¾Ð³Ð¾ Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼Ð°
@@ -107,7 +107,7 @@ class Graph {
 		
 		// arr = new ArrayList<Integer>();
 
-		int column = 1; // Ð�Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð°Ñ� Ð²ÐµÑ€ÑˆÐ¸Ð½Ð° Ð¿Ñ€Ð¾Ð¿ÑƒÑ�ÐºÐ°ÐµÑ‚Ñ�Ñ�
+		int column = 0; // Ð�Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð°Ñ� Ð²ÐµÑ€ÑˆÐ¸Ð½Ð° Ð¿Ñ€Ð¾Ð¿ÑƒÑ�ÐºÐ°ÐµÑ‚Ñ�Ñ�
 		while (column < nVerts) // ÐŸÐµÑ€ÐµÐ±Ð¾Ñ€ Ñ�Ñ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²
 		{
 			// Ð•Ñ�Ð»Ð¸ Ð²ÐµÑ€ÑˆÐ¸Ð½Ð° column ÑƒÐ¶Ðµ Ð²ÐºÐ»ÑŽÑ‡ÐµÐ½Ð° Ð² Ð´ÐµÑ€ÐµÐ²Ð¾,
