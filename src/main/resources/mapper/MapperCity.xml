@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solvd.dijkstra.interfaces.ICity">
+
+    <insert id="add" useGeneratedKeys="true"
+    keyProperty="id">
+        INSERT into cities (id, name)
+        VALUES (#{id},#{name})
+    </insert>
+
+    <select id="getById" resultMap="CityResultMap">
+        SELECT * FROM cities
+        WHERE id = #{id}
+    </select>
+
+    <resultMap id="CityResultMap" type="com.solvd.dijkstra.models.Cities" autoMapping="false">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+</mapper>
