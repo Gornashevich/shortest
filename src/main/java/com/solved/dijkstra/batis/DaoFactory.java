@@ -38,4 +38,26 @@ public class DaoFactory {
 		return countMap;
 
 	}
+
+	public static IPathway getPathway() {
+
+		IPathway countMap = null;
+		SqlSessionFactory factory = null;
+
+		try {
+
+			InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+			factory = new SqlSessionFactoryBuilder().build(is);
+			countMap = factory.openSession(true).getMapper(IPathway.class);
+
+		} catch (IOException e) {
+			LOGGER.error("Error: " + e);
+		} /*
+			 * finally { ((PooledDataSource)
+			 * factory.getConfiguration().getEnvironment().getDataSource()).forceCloseAll();
+			 * }
+			 */
+		return countMap;
+
+	}
 }
