@@ -16,11 +16,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mapper/MapperAddress.xml"/>
-        <mapper resource="mapper/MapperHuman.xml"/>
-        <mapper resource="mapper/MapperCustomer.xml"/>
-        <mapper resource="mapper/MapperCreditCard.xml"/>
-        <mapper resource="mapper/MapperLoan.xml"/>
-        <mapper resource="mapper/MapperUser.xml"/>
+        <mapper resource="mapper/MapperCity.xml"/>
+        <mapper resource="mapper/MapperPathway.xml"/>
     </mappers>
 </configuration>

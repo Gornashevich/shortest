@@ -51,15 +51,15 @@ class Graph {
             sPath[j] = new DistPar(startTree, tempDist);
         }
         // Пока все вершины не окажутся в дереве
-        while (nTree < nVerts) {
+        while (nTree < nVerts ) {
             int indexMin = getMin(); // Получение индекса элемента с мин значением из sPath
             int minDist = sPath[indexMin].distance;
-            if (minDist == INFINITY) // Если все расстояния бесконечны
+            if (minDist == INFINITY) // Если минимальное расстояние бесконечно
             { // или уже находятся в дереве,
                 LOGGER.info("There are unreachable vertices");
                 break; // построение sPath завершено
             } else { // Возврат currentVert
-                currentVert = indexMin; // к ближайшей вершине
+                currentVert = indexMin; // ближайшая вершина становится текущей
                 startToCurrent = sPath[indexMin].distance;
                 // Минимальное расстояние от startTree
                 // до currentVert равно startToCurrent
@@ -68,6 +68,7 @@ class Graph {
             vertexList[currentVert].isInTree = true;
             nTree++;
             adjust_sPath(); // Обновление массива sPath[]
+
         }
         nTree = 0; // Очистка дерева
         for (int j = 0; j < nVerts; j++)
@@ -78,22 +79,25 @@ class Graph {
     { // с наименьшим расстоянием
         int minDist = INFINITY; // Исходный высокий "минимум"
         int indexMin = 0;
-        for (int j = 1; j < nVerts; j++) // Для каждой вершины
-        { // Если она не включена в дерево
+
+        for (int j = 0; j < nVerts; j++) // Для каждой вершины
+        { // Если она не включена в дерево - false
             if (!vertexList[j].isInTree && // и ее расстояние меньше
                     sPath[j].distance < minDist) // старого минимума
             {
                 minDist = sPath[j].distance;
                 indexMin = j; // Обновление минимума
+
             }
         }
+
         return indexMin; // Метод возвращает индекс
     } // элемента с наименьшим расстоянием
 
     public void adjust_sPath() {
         // Обновление данных в массиве кратчайших путей sPath
-        int column = 1; // Начальная вершина пропускается
-        while (column < nVerts) // Перебор столбцов
+        int column = 0; // Начальная вершина пропускается
+        while (column < nVerts) // Перебор оставшихся вершин
         {
             // Если вершина column уже включена в дерево, она пропускается
             if (vertexList[column].isInTree) {
@@ -101,7 +105,7 @@ class Graph {
                 continue;
             }
             // Вычисление расстояния для одного элемента sPath
-            // Получение ребра от currentVert к column
+            // Получение ребра от currentVert к краю
             int currentToFringe = adjMat[currentVert][column];
             // Суммирование расстояний
             int startToFringe = startToCurrent + currentToFringe;
