@@ -1,4 +1,4 @@
-package com.solved.dijkstra;
+package com.solvd.dijkstra;
 
 public class WorkWithPoints {
 

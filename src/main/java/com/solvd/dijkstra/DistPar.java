@@ -1,4 +1,4 @@
-package com.solved.dijkstra;
+package com.solvd.dijkstra;
 
 class DistPar // Расстояние и родительская вершина
 { // Объекты сохраняются в массиве sPath
