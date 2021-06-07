@@ -1,6 +1,6 @@
 package com.solved.dijkstra;
 
-class Vertex {
+public class Vertex {
     public String name; // ÐœÐµÑ‚ÐºÐ° (Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€, 'A')
     public boolean isInTree;
     private boolean visited;
