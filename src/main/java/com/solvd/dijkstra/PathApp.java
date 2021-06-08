@@ -1,12 +1,11 @@
-package com.solved.dijkstra;
+package com.solvd.dijkstra;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.solved.dijkstra.batis.City;
-import com.solved.dijkstra.batis.CityService;
-import com.solved.dijkstra.batis.Pathway;
-import com.solved.dijkstra.batis.PathwayService;
+import com.solvd.dijkstra.batis.CityService;
+import com.solvd.dijkstra.batis.Pathway;
+import com.solvd.dijkstra.batis.PathwayService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,7 +34,7 @@ class PathApp {
 			LOGGER.info("Choose the end point name:");
 			String finishName = reader.readLine();
 			int[] points = WorkWithPoints.selector(startName, finishName, theGraph.getVertexList());
-			theGraph.path(points[0]); // Кратчайшие пути
+			theGraph.path(points[0]);
 			theGraph.displayPaths(points[0], points[1]);
 
 		} catch (IOException ex) {

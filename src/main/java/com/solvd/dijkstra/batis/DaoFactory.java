@@ -1,9 +1,8 @@
-package com.solved.dijkstra.batis;
+package com.solvd.dijkstra.batis;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;

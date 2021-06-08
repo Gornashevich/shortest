@@ -1,4 +1,4 @@
-package com.solved.dijkstra;
+package com.solvd.dijkstra;
 
 public class Vertex {
     public String name; // ÐœÐµÑ‚ÐºÐ° (Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€, 'A')

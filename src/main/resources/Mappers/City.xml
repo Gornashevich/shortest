@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.solved.dijkstra.batis.ICity">
+<mapper namespace="com.solvd.dijkstra.batis.ICity">
 	<resultMap id="cityMapper"
-		type="com.solved.dijkstra.batis.City" autoMapping="false">
+               type="com.solvd.dijkstra.batis.City" autoMapping="false">
 		
 		<result property="name" column="name" />
 

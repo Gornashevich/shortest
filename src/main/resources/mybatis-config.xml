@@ -10,7 +10,7 @@
 				<property name="url"
 					value="jdbc:mysql://localhost:3306/shortestWay" />
 				<property name="username" value="root" />
-				<property name="password" value="root" />
+				<property name="password" value="NpwS1L91" />
 			</dataSource>
 		</environment>
 	</environments>

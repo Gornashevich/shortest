@@ -1,4 +1,4 @@
-package com.solved.dijkstra.batis;
+package com.solvd.dijkstra.batis;
 
 import lombok.Data;
 
